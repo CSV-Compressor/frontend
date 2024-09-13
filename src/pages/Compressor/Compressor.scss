@@ -1,0 +1,84 @@
+@import '../../styles/global.scss';
+
+.compressor{
+  &-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  &-title{
+    margin-bottom: 30px;
+    color: $light-grey;
+    font-size: 46px;
+  }
+  &-text{
+    width: 50%;
+    text-align: center;
+    color: $dark-grey;
+    margin: 0 0 30px 0;
+    font-size: 20px;
+  }
+  &-form{
+    display: flex;
+    flex-direction: column;
+    &__btns{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      button{
+        width: 45%;
+        border-radius: 15px;
+        padding: 10px 5px;
+        font-weight: 600;
+        color: $white;
+        border: 0;
+        transition: 0.5s ease-out;
+        &.cancel{
+          background-color: $red;
+          &:hover{
+            background-color: transparent;
+            box-shadow: 0 0 0 1px $red;
+          }
+        }
+        &.validate{
+          background-color: $blue;
+          &:hover{
+            background-color: transparent;
+            box-shadow: 0 0 0 1px $blue;
+          }
+        }
+
+      }
+    }
+  }
+  &-uploader{
+    display: none;
+    &__label{
+      color: $primary;
+      background-color: $light-grey;
+      font-weight: 800;
+      padding: 20px 10px;
+      border-radius: 15px;
+      // margin: 0 20px;
+      width: 300px;
+      text-align: center;
+      transition: 0.5s ease-out;
+      margin-bottom: 15px;
+      pointer-events: none;
+      &.empty{
+        pointer-events: all;
+        cursor: pointer;
+        &:hover{
+          color: $light-grey;
+          background:none;
+          border: 1px solid $light-grey;
+        }
+      }
+    }
+  }
+}
